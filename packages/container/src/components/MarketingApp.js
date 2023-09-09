@@ -1,7 +1,5 @@
 import { mount } from 'marketingCont/MarketingApp'
-import { useRef, useEffect } from 'react'
-
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 
 const MarketingApp = () => {
   const ref = useRef(null)
