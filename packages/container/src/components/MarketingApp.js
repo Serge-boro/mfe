@@ -1,4 +1,4 @@
-import { mount } from 'marketingCont/MarketingApp'
+import { mount } from 'marketing/MarketingApp'
 import React, { useRef, useEffect } from 'react'
 
 const MarketingApp = () => {
