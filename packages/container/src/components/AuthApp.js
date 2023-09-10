@@ -1,8 +1,8 @@
-import { mount } from 'marketing/MarketingApp'
+import { mount } from 'auth/AuthApp'
 import React, { useRef, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 
-const MarketingApp = () => {
+const MarketingApp = ({ checkIsSignIn }) => {
   const ref = useRef(null)
   const history = useHistory()
   // console.log({ historyCon: history })
@@ -18,6 +18,9 @@ const MarketingApp = () => {
         if (pathname !== nextPathName) {
           history.push(nextPathName)
         }
+      },
+      onSignIn: () => {
+        checkIsSignIn()
       },
     })
     history.listen(onParentNavigate)
